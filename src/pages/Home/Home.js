@@ -1,15 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components";
-import Home from "./Home/Home";
-export default function Main() {
+import Header from "./Header";
+export default function Home() {
   return (
     <Container>
-      <Home/>
+      <Header/>
+      <p>TESTE ALVIN</p>
     </Container>
   );
 }
 
 const Container = styled.div`
 background-color: lightblue;
-min-height: 100vh;
-width: 100%;
+height:100%;
 `;
