@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import 'primeicons/primeicons.css';
+import scroll from "../../hooks/Scroll";
 
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
@@ -15,7 +16,8 @@ export default function Header() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
-    setSelectedItem(item);
+    setSelectedItem(item.item);
+    scroll(item.position);
   };
 
   return (
@@ -33,25 +35,25 @@ export default function Header() {
     </h1>
         <div
           className={selectedItem === 'home' ? 'selected' : ''}
-          onClick={() => handleItemClick('home')}
+          onClick={() => handleItemClick({item: 'home', position: 0})}
         >
           Home
         </div>
         <div
           className={selectedItem === 'sobre' ? 'selected' : ''}
-          onClick={() => handleItemClick('sobre')}
+          onClick={() => handleItemClick({item: 'sobre', position: 670})}
         >
           Sobre nós
         </div>
         <div
           className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick('equipe')}
+          onClick={() => handleItemClick({item: 'equipe', position: 1270})}
         >
           Equipe
         </div>
         <div
           className={selectedItem === 'servicos' ? 'selected' : ''}
-          onClick={() => handleItemClick('servicos')}
+          onClick={() => handleItemClick({item: 'servicos', position: 10000000})}
         >
           Serviços
         </div>
@@ -72,6 +74,8 @@ justify-content:center;
 align-items:center;
 width:100%;
 height:150px;
+position: fixed;
+z-index: 100000;
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
