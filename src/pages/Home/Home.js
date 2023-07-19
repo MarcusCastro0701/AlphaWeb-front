@@ -1,10 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./Header";
+import { AutoComplete } from 'primereact/autocomplete';
+
 export default function Home() {
+
   return (
     <Container>
-      <Header/>
-      <p>TESTE ALVIN</p>
+      <Header />
     </Container>
   );
 }
