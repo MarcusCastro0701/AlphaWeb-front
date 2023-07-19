@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Container>
       <Header/>
-      <p>TESTE ALVIN</p>
+      <p>nada</p>
     </Container>
   );
 }
