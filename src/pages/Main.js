@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Home from "./Home/Home";
+
+
+
 export default function Main() {
   return (
     <Container>
@@ -9,7 +12,7 @@ export default function Main() {
 }
 
 const Container = styled.div`
-background-color: lightblue;
+background-image: lightblue;
 min-height: 100vh;
 width: 100%;
 `;
