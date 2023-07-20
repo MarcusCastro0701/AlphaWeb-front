@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import SobreNos from "../../components/SobreNos";
 import Inicio from "../../components/Inicio";
 import Equipe from "../../components/Equipe";
-import fundo from "../../assets/images/fundo.png"
+import fundo2 from "../../assets/images/fundo2.png"
 import Servicos from "../../components/Servicos";
 
 export default function Timeline(){
 
     
     const backgroundStyle = {
-        backgroundImage: `url(${fundo})`,
+        backgroundImage: `url(${fundo2})`,
         opacity: 1,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
