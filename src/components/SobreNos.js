@@ -1,32 +1,49 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import video from "../assets/videos/video.mp4"
 import ReactPlayer from "react-player";
+import YouTube from 'react-youtube';
 
 export default function SobreNos(){
+
+    // const opts = {
+    //     height: '250',
+    //     width: '400',
+    //     playerVars: {
+    //       controls: 0,
+    //       fs: 0,
+    //       iv_load_policy: 3,
+    //       modestbranding: 1,
+    //       showinfo: 0,
+    //       modestbranding: 1,
+    //       loop: 0,
+    //       rel: 0,
+    //     },
+    //   };
 
     return(
 
         <SubContainer id="1">
 
                 <p>Sobre Nós</p>
+                
                 <ReactPlayer
-                    src={video}
-                    url={video}
-                    width="100%"
-                    controls={true}
-                    style={{
-                    borderRadius: '5px',
-                    outline: 'none',
-                    }}
-                    config={{
-                    file: {
-                        attributes: {
-                        controlsList: 'nodownload',
+                        url="https://vimeo.com/846995621?share=copy"
+                        width="640px"
+                        height="360px"
+                        controls={true}
+                        style={{
+                        borderRadius: '15px',
+                        outline: 'none',
+                        }}
+                        config={{
+                        file: {
+                            attributes: {
+                            controlsList: 'nodownload',
+                            },
                         },
-                    },
-                    }}
-                />
+                        }}
+                    />
+                    
 
         </SubContainer >
 
@@ -48,9 +65,14 @@ p{
     font-size: 60px;
     color: white;
 }
-video{
-    width: 500px;
-    height: 600px;
+iframe{
     border-radius: 15px;
+    border: 5px solid black;
+    height: 800px;
 }
 `
+
+const VideoContainer = styled.div`
+border-radius: 15px;
+`
+

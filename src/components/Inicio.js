@@ -17,7 +17,7 @@ const SubContainer = styled.div `
 display: flex;
 align-items: center;
 justify-content: center;
-width: 600px;
+width: 100%;
 height: 600px;
 background-color: #06066b;
 margin-top: 60px;
