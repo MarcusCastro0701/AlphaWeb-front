@@ -5,8 +5,8 @@ export default function TeamMember(props){
     return (
         <CarouselContainer>
           <img src={props.imgSrc} />
-          <p>Marcus Castro</p>
-          <h1>Engenheiro de Software</h1>
+          <p>{props.name}</p>
+          <h1>{props.role}</h1>
         </CarouselContainer>
       );
 }
