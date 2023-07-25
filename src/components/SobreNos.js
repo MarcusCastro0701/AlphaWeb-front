@@ -1,78 +1,116 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import ReactPlayer from "react-player";
 import YouTube from 'react-youtube';
+import scroll from "../hooks/Scroll";
 
 export default function SobreNos(){
 
-    // const opts = {
-    //     height: '250',
-    //     width: '400',
-    //     playerVars: {
-    //       controls: 0,
-    //       fs: 0,
-    //       iv_load_policy: 3,
-    //       modestbranding: 1,
-    //       showinfo: 0,
-    //       modestbranding: 1,
-    //       loop: 0,
-    //       rel: 0,
-    //     },
-    //   };
+     const opts = {
+         playerVars: {
+           controls: 0,
+           fs: 0,
+           iv_load_policy: 3,
+           modestbranding: 1,
+           showinfo: 0,
+           loop: 0,
+           rel: 0,
+         },
+       };
 
     return(
 
-        <SubContainer id="1">
+        <Container id="1">
 
-                <p>Sobre Nós</p>
+            <SubContainerLeft>
+                <p>Serviços validados por</p>
+                <h1>dezenas</h1>
+                <p>de clientes.</p>
+                <h2>
+                    Acreditamos que <b>cada cliente é único</b>, assim como suas <b>necessidades</b> e <b>metas</b>. É por isso que <b>não</b> oferecemos <b>soluções genéricas</b>. 
+                </h2>
+                <h2>
+                    Nossa equipe de gerentes e desenvolvedores trabalha <b>lado a lado com você</b>, para entender o <b>coração do seu negócio</b> e projetar <b>estratégias  e aplicações personalizadas</b> que o leve diretamente ao seu <b>público-alvo</b> e que torne suas <b>mediações</b> mais <b>práticas</b>.
+                </h2>
+                <div onClick={() => scroll(1500)}>
+                    CONHEÇA A NOSSA EQUIPE
+                </div>
                 
-                <ReactPlayer
-                        url="https://vimeo.com/846995621?share=copy"
-                        width="640px"
-                        height="360px"
-                        controls={true}
-                        style={{
-                        borderRadius: '15px',
-                        outline: 'none',
-                        }}
-                        config={{
-                        file: {
-                            attributes: {
-                            controlsList: 'nodownload',
-                            },
-                        },
-                        }}
-                    />
-                    
+            </SubContainerLeft>
 
-        </SubContainer >
+            <SubContainerRight>
+                <SubLine>
+                    <p> O que nós fazemos? </p>
+                </SubLine>
+                <YouTube videoId="x6RgJ_IEtEA" opts={opts}/>
+            </SubContainerRight>
+
+        </Container >
 
     )
 
 }
 
-const SubContainer = styled.div `
+const SubLine = styled.div`
+   p{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1.5vh;
+}
+`
+
+const Container = styled.div `
 display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-width: 600px;
+flex-direction: row;
+width: 1300px;
 height: 600px;
-background-color: #06066b;
-margin-top: 60px;
+margin: 60px 0 100px 0;
 border-radius: 15px;
+`
+
+const SubContainerLeft = styled.div`
+width: 500px;
+height: 100%;
+padding: 45px;
 p{
-    font-size: 60px;
+    font-size: 37px;
     color: white;
 }
-iframe{
-    border-radius: 15px;
-    border: 5px solid black;
-    height: 800px;
+h1{
+    font-size: 37px;
+    color: #3a76c9;
 }
+h2{
+    margin-top: 30px;
+    font-size: 15px;
+    color: white;
+    line-height: 20px;
+    font-weight: 200;
+}
+b{
+    color: #3a76c9;
+    font-weight: 800;
+}
+div{
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #3a76c9;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 60px;
+    }
 `
-
-const VideoContainer = styled.div`
-border-radius: 15px;
+const SubContainerRight = styled.div`
+width: 800px;
+padding: 45px;
+iframe{
+    border-radius: 35px;
+    border: 5px solid black;
+    height: 400px;
+    width: 700px;
+    }
 `
-

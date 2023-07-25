@@ -44,7 +44,7 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'sobre' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'sobre', position: 670})}
+          onClick={() => handleItemClick({item: 'sobre', position: 720})}
         >
           Sobre nós
         </div>

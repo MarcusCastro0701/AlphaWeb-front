@@ -3,7 +3,6 @@ import React, { useCallback } from 'react';
 import SobreNos from "../../components/SobreNos";
 import Inicio from "../../components/Inicio";
 import Equipe from "../../components/Equipe";
-import fundo from "../../assets/images/fundo.png"
 import Servicos from "../../components/Servicos";
 import Particles from "react-tsparticles";
 import particlesOptions from "./../../particles.json"
@@ -13,6 +12,8 @@ export default function Timeline(){
       const particlesInit = useCallback(main => {
         loadFull(main);
     }, [])
+    
+
 
     return(
     
