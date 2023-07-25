@@ -1,30 +1,24 @@
 import styled from "styled-components";
-import React, { useState } from 'react';
+import React, { useCallback } from 'react';
 import SobreNos from "../../components/SobreNos";
 import Inicio from "../../components/Inicio";
 import Equipe from "../../components/Equipe";
 import fundo from "../../assets/images/fundo.png"
 import Servicos from "../../components/Servicos";
-
+import Particles from "react-tsparticles";
+import particlesOptions from "./../../particles.json"
+import { loadFull } from "tsparticles";
 export default function Timeline(){
 
-    
-    const backgroundStyle = {
-        backgroundImage: `url(${fundo})`,
-        opacity: 1,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        width: '100%',
-        height: '100%',
-      };
-
+      const particlesInit = useCallback(main => {
+        loadFull(main);
+    }, [])
 
     return(
     
 
-        <MainContainer style={backgroundStyle}>
-
+        <MainContainer>
+               <Particles options={particlesOptions} init={particlesInit}/>
            <Inicio/>
 
             <SobreNos/>
