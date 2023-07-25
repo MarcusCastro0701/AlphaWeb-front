@@ -1,10 +1,14 @@
-import { useContext, useEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import React from 'react';
+
 import Main from "./pages/Main";
 
 function App() {
-  return <Main />;
+
+  return (<>
+  <Main />
+  
+  </>)
 }
 
 export default App;

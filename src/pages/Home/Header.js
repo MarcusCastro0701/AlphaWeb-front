@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useRef } from 'react';
 import 'primeicons/primeicons.css';
 import scroll from "../../hooks/Scroll";
-
+import LogoNoBG from "../img/LogoNoBG.png"
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -23,16 +23,19 @@ export default function Header() {
   return (
     <Container>
       <HeaderItems>
-      <h1
+        <Logo>
+        <img
+    src={LogoNoBG}
+    alt="Logo"
+    style={{ width: '4rem' }}
+  />
+        <h1
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <i
-        className={`pi pi-bitcoin ${isHovered ? 'pi-spin' : ''}`}
-        style={{ fontSize: '2rem' }}
-      ></i>
       ALPHA WEB
     </h1>
+        </Logo>
         <div
           className={selectedItem === 'home' ? 'selected' : ''}
           onClick={() => handleItemClick({item: 'home', position: 0})}
@@ -47,7 +50,7 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'equipe', position: 1270})}
+          onClick={() => handleItemClick({item: 'equipe', position: 1450})}
         >
           Equipe
         </div>
@@ -113,3 +116,10 @@ width:90%;
     color: #00efff;
   }
 `;
+
+const Logo = styled.div`
+width:250px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+`

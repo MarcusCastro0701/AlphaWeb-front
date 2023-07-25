@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import scroll from "../hooks/Scroll";
-import {BsArrowDownShort} from "react-icons/bs"
 
 export default function SobreNos(){
 
@@ -13,7 +12,6 @@ export default function SobreNos(){
            iv_load_policy: 3,
            modestbranding: 1,
            showinfo: 0,
-           modestbranding: 1,
            loop: 0,
            rel: 0,
          },
