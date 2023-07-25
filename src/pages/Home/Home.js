@@ -16,4 +16,5 @@ export default function Home() {
 
 const Container = styled.div`
 width:100%;
+
 `;
