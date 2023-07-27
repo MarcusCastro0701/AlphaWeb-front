@@ -8,7 +8,7 @@ export default function Inicio(){
 
     return(
         <Container>
-            <SubContainerLeft>
+            <SubContainer>
                 <h1>
                     Desenvolvendo e aplicando 
                 </h1>
@@ -22,10 +22,8 @@ export default function Inicio(){
                     CONHEÇA A ALPHAWEB
                 </div>
                 <Icone onClick={() => scroll(710)}/>
-            </SubContainerLeft>
+            </SubContainer>
 
-            <SubContainerRight>
-            </SubContainerRight>
         </Container>
     )
 
@@ -36,21 +34,20 @@ const Container = styled.div `
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     height: 700px;
-    background-color: none;
     margin-top: 60px;
     border-radius: 15px;
     p{
         font-size: 20px;
         color: #197fbe;
     }
+    @media (max-width: 1200px) {
+    margin-top: -50px;
+}
+    
 `
-const SubContainerLeft = styled.div`
-    width: 90%;
-    height: 100%;
-    border-radius: 15px 0 0 15px;
-    padding-left: 10%;
+const SubContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,26 +57,36 @@ const SubContainerLeft = styled.div`
         color: #3a76c9;
         margin-top: 8px;
         font-weight: 700;
+        @media (max-width: 1200px) {
+            font-size: 30px;
+}
     }
     h1{
         margin-top: 0px;
         font-size: 40px;
         color: white;
         font-weight: 700;
+        @media (max-width: 1200px) {
+            font-size: 30px;
+            text-align: center;
+}
     }
     h2{
         margin: 60px 0 60px 0;
         font-size: 23px;
         color: white;
-        width: 800px;
+        width: 600px;
         text-align: center;
+        @media (max-width: 1200px) {
+            font-size: 20px;
+            width: 100%;
+}
     }
     div{
         width: 300px;
         height: 50px;
         color: white;
         background-color: #3a76c9;
-        border: none;
         border-radius: 8px;
         display: flex;
         align-items: center;
@@ -94,14 +101,4 @@ const Icone = styled(BsArrowDownShort)`
     color: white;
     margin-top: 15px;
     cursor: pointer;
-`
-
-const SubContainerRight = styled.div`
-    width: 10%;
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-    p{
-        font-size: 20px;
-        color: white;
-    }
 `

@@ -5,6 +5,8 @@ import scroll from "../hooks/Scroll";
 
 export default function SobreNos(){
 
+    const height = Number(window.innerHeight);
+
      const opts = {
          playerVars: {
            controls: 0,
@@ -31,7 +33,7 @@ export default function SobreNos(){
                 <h2>
                     Nossa equipe de gerentes e desenvolvedores trabalha <b>lado a lado com você</b>, para entender o <b>coração do seu negócio</b> e projetar <b>estratégias  e aplicações personalizadas</b> que o leve diretamente ao seu <b>público-alvo</b> e que torne suas <b>mediações</b> mais <b>práticas</b>.
                 </h2>
-                <div onClick={() => scroll(1500)}>
+                <div onClick={() => scroll(1700)}>
                     CONHEÇA A NOSSA EQUIPE
                 </div>
                 
@@ -63,14 +65,24 @@ display: flex;
 flex-direction: row;
 width: 1300px;
 height: 600px;
-margin: 60px 0 100px 0;
+margin: 60px 0 300px 0;
 border-radius: 15px;
+@media (max-width: 1200px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    width: 100%;
+  }
 `
 
 const SubContainerLeft = styled.div`
 width: 500px;
 height: 100%;
 padding: 45px;
+@media (max-width: 1200px) {
+    width: 100%;
+  }
 p{
     font-size: 37px;
     color: white;
@@ -107,10 +119,21 @@ div{
 const SubContainerRight = styled.div`
 width: 800px;
 padding: 45px;
+@media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
 iframe{
     border-radius: 35px;
     border: 5px solid black;
     height: 400px;
     width: 700px;
+    @media (max-width: 1200px) {
+    width: 350px;
+    height: 200px;
+  }
     }
 `

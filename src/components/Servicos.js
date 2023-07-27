@@ -4,9 +4,7 @@ import React, { useState, useEffect } from 'react';
 export default function Servicos(){
 
     return(
-        <SubContainer>
-            <p>Serviços</p>
-        </SubContainer>
+        <></>
     )
 
 }
@@ -24,10 +22,5 @@ border-radius: 15px;
 p{
     font-size: 60px;
     color: white;
-}
-video{
-    width: 500px;
-    height: 600px;
-    border-radius: 15px;
 }
 `

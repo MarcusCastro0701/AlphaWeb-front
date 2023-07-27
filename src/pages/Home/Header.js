@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useRef } from 'react';
 import 'primeicons/primeicons.css';
 import scroll from "../../hooks/Scroll";
-import LogoNoBG from "../img/LogoNoBG.png"
+import LogoNoBG from "../../assets/images/LogoNoBG.png"
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -50,7 +50,7 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'equipe', position: 1450})}
+          onClick={() => handleItemClick({item: 'equipe', position: 1700})}
         >
           Equipe
         </div>
