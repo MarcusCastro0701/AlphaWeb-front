@@ -69,27 +69,48 @@ export default function Equipe(){
 
 
 const Container = styled.div `
-height: 600px;
+height: 700px;
 width: 800px;
 margin-top: 60px;
 border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column; 
 p{
   text-align: center;
   color: white;
   font-size: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 100px;
+  @media (max-width: 1200px) {
+    margin-bottom: 100px;
+  }
 }
+@media (max-width: 1200px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const Carousel = styled(Slider)`
 height: 500px;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
 color: white;
+@media (max-width: 1200px) {
+    width: 270px;
+    height: 205px;
+  }
 img{
     width:400px;
     height: 350px;
     border-radius: 5%;
+    @media (max-width: 1200px) {
+    width: 300px;
+    height: 175px;
+    margin-top: 40px;
+  }
 }
 .slick-dots li button:before {
   color: white; 
