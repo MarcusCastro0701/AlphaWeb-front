@@ -84,6 +84,7 @@ p{
   margin-bottom: 100px;
   @media (max-width: 1200px) {
     margin-bottom: 100px;
+    font-size: 35px;
   }
 }
 @media (max-width: 1200px) {
@@ -107,9 +108,9 @@ img{
     height: 350px;
     border-radius: 5%;
     @media (max-width: 1200px) {
-    width: 300px;
-    height: 175px;
-    margin-top: 40px;
+    width: 240px;
+    height: 150px;
+    margin-top: 10px;
   }
 }
 .slick-dots li button:before {
