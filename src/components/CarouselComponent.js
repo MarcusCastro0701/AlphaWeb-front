@@ -17,16 +17,16 @@ width:100%;
 height:100%;
 align-items: center;
 justify-content: center;
-border-radius:10%;
-img{
-  border-radius:10%;
-}
 p{
   color: white;
   font-size: 32px;
   margin-top: 10px;
   display: flex;
   flex-direction:column;
+  @media (max-width: 1200px) {
+    font-size: 27px;
+    line-height: 30px;
+  }
   b{
     color: white;
     font-size: 25px;
@@ -36,10 +36,6 @@ p{
       line-height: 25px;
       margin-bottom: 30px;
     }
-  }
-  @media (max-width: 1200px) {
-    font-size: 30px;
-    line-height: 30px;
   }
 }
 `
