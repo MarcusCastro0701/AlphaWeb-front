@@ -121,7 +121,7 @@ width:90%;
     
   div {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 3.5vw;
     font-weight:600;
   }
   }
