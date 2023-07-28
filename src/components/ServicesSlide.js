@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 
-export default function TeamMember(props){
+export default function ServicesSlide(props){
     return (
         <CarouselContainer>
-          <img src={props.imgSrc} />
-          <p>{props.name} <b>{props.role}</b></p>
+          <p>{props.name} <b>{props.description}</b></p>
         </CarouselContainer>
       );
 }
