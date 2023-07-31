@@ -100,8 +100,8 @@ align-items: center;
 justify-content: center;
 color: white;
 @media (max-width: 1200px) {
-    width: 270px;
-    height: 205px;
+    width: 370px;
+    height: 280px;
   }
 img{
     width:400px;
@@ -109,12 +109,33 @@ img{
     border-radius: 5%;
     @media (max-width: 1200px) {
     width: 240px;
-    height: 150px;
-    margin-top: 10px;
+    height: 180px;
+    margin: 10px 0 40px 0;
   }
 }
 .slick-dots li button:before {
   color: white; 
+}
+p{
+  color: white;
+  font-size: 32px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction:column;
+  @media (max-width: 1200px) {
+    font-size: 27px;
+    line-height: 30px;
+  }
+  b{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    @media (max-width: 1200px) {
+      font-size: 23px;
+      line-height: 25px;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 `
