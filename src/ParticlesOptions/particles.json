@@ -63,7 +63,7 @@
         "quantity": 1
       },
       "attract": {
-        "distance": 200,
+        "distance": 100,
         "duration": 0.4,
         "easing": "ease-out-quad",
         "factor": 1,
@@ -333,7 +333,7 @@
         "height": 1080
       },
       "limit": 0,
-      "value": 40
+      "value": 30
     },
     "opacity": {
       "random": {
