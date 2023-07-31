@@ -18,32 +18,32 @@ export default function Equipe(){
     {
       name: 'Álvaro Caires',
       role: 'Marketing',
-      imgSrc: alvaro
+      imgSrc:' alvaro'
     },
     {
       name: 'Pablo Siervuli',
       role: 'Marketing',
-      imgSrc: pablo
+      imgSrc: 'pablo'
     },
     {
       name: 'Bruno Claudiano',
       role: 'Marketing & Vendas',
-      imgSrc: bruno,
+      imgSrc: 'bruno',
     },
     {
       name: 'Marcus Castro',
       role: 'Desenvolvedor',
-      imgSrc: marcus,
+      imgSrc: 'marcus',
     },
     {
       name: 'Pedro Leôncio',
       role: 'Desenvolvedor',
-      imgSrc: pedrol,
+      imgSrc: 'pedrol',
     },
     {
       name: 'Pedro Ribeiro',
       role: 'Desenvolvedor',
-      imgSrc: pedroa,
+      imgSrc:' pedroa',
     },
     
   ]
