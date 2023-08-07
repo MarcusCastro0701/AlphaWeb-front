@@ -10,7 +10,7 @@ import TeamMember from "./CarouselComponent";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { matchRoutes } from "react-router";
+import scroll from "../hooks/Scroll";
 
 export default function Equipe(){
 
@@ -58,15 +58,32 @@ export default function Equipe(){
     dotsClass: 'slick-dots',
   };
         return (
-          <Container>
-            <p>Nossa equipe</p>
-            <Carousel {...settings}>
-              {members.map((item) => (<TeamMember imgSrc={item.imgSrc} name={item.name} role={item.role}/>))}
-            </Carousel>
-          </Container>
+          <>
+            <Container>
+              <p>Nossa equipe</p>
+              <Carousel {...settings}>
+                {members.map((item) => (<TeamMember imgSrc={item.imgSrc} name={item.name} role={item.role}/>))}
+              </Carousel>
+            </Container>
+            <Click onClick={() => scroll(2000)}>
+              CONHEÇA NOSSOS SERVIÇOS
+            </Click>
+          </>
         );
 }
 
+const Click = styled.div`
+width: 300px;
+height: 50px;
+color: white;
+background-color: #3a76c9;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 30px;
+cursor: pointer;
+`
 
 const Container = styled.div `
 height: 700px;

@@ -23,53 +23,26 @@ export default function Servicos(){
       };
 
     return(
-        <SubContainer>
-       <p>Serviços</p>
-       <Carousel {...settings}>
-              {services.map((item) => (<ServicesSlide name={item.name} description={item.description}/>))}
-            </Carousel>
-        </SubContainer>
+        <Container>
+          <p>Serviços</p>
+          
+        </Container>
     )
 
 }
 
-const SubContainer = styled.div `
+const Container = styled.div `
 display: flex;
+margin-top: 25px;
 align-items: center;
 justify-content: center;
 flex-direction: column;
 width: 100%;
-height: 600px;
+height: 900px;
 margin-top: 60px;
-border-radius: 15px;
+background-color: lightsalmon;
 p{
     font-size: 60px;
     color: white;
 }
-`
-const Carousel = styled(Slider)`
-height: 500px;
-width: 80%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: white;
-@media (max-width: 1200px) {
-    width: 270px;
-    height: 205px;
-  }
-img{
-    width:400px;
-    height: 350px;
-    border-radius: 5%;
-    @media (max-width: 1200px) {
-    width: 240px;
-    height: 150px;
-    margin-top: 10px;
-  }
-}
-.slick-dots li button:before {
-  color: white; 
-}
-
 `

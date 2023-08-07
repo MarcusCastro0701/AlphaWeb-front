@@ -26,6 +26,7 @@ export default function Timeline() {
       <SobreNos/>
       <Equipe/>
       <Servicos/>
+      <Rodape>rodapé</Rodape>
     </MainContainer>
   );
 }
@@ -36,7 +37,12 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 60px;
   padding-top: 150px;
   z-index: 0;
 `;
+
+const Rodape = styled.footer`
+background-color: red;
+width: 100%;
+height: 100px;
+`
