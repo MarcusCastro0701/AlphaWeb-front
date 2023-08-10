@@ -9,25 +9,27 @@ export default function Servicos(){
     const services = [
       {  name:"Marketing",
         description:`
-         Tráfego pago  
-        -Gerenciamento de redes sociais 
-        -Criação de logo
-        -Criação de criativo`,
+        Tráfego Pago  
+        _Gerenciamento de Redes Sociais 
+        _Criação de Logo
+        _Gerenciamento de criativos`,
         icon:<GoGraph color={"#3A76C9"} fontSize={"5vh"}/>},
       {  name:"Programação",
         description:`
         Criação de Websites
-        -Manutenção sites `,
+        _Criação de E-Commerce
+        _Criação de Sistemas de Gerenciamento
+        _Personalização e Adaptação das Aplicações`,
       icon:<HiCode color={"#3A76C9"} fontSize={"5vh"}/>}]
     
 
     return(
-        <SubContainer>
+        <Container>
        <p>Serviços</p>
       <Services>
-      {services.map((item)=> <LoadServices key={item.id} name={item.name} description={item.description.split("-")} icon={item.icon} />)}
+      {services.map((item)=> <LoadServices key={item.id} name={item.name} description={item.description.split("_")} icon={item.icon} />)}
       </Services>
-        </SubContainer>
+        </Container>
     )
 
 }
@@ -39,12 +41,14 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 width: 100%;
-height: 700px;
-margin-top: 60px;
-background-color: lightsalmon;
+height: 900px;
+margin: 60px 0 80px 0;
 p{
     font-size: 60px;
     color: white;
+    @media(max-width: 1200px) {
+      font-size: 40px;
+}
 }
 @media(max-width: 1200px) {
   position:relative;

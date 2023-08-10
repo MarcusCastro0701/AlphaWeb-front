@@ -43,7 +43,7 @@ const Container = styled.div `
         color: #197fbe;
     }
     @media (max-width: 1200px) {
-    margin-top: -50px;
+    margin-top: -90px;
 }
     
 `

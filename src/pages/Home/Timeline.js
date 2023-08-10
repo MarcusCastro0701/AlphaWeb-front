@@ -9,6 +9,7 @@ import particles from "./../../ParticlesOptions/particles.json";
 import particlesMobile from "./../../ParticlesOptions/particlesMobile.json";
 import { loadFull } from "tsparticles";
 import useParticlesInit from "../../hooks/useParticlesInit";
+import Footer from "../../components/Footer";
 
 export default function Timeline() {
   const particlesInit = useParticlesInit()
@@ -26,7 +27,7 @@ export default function Timeline() {
       <SobreNos/>
       <Equipe/>
       <Servicos/>
-      <Rodape>rodapé</Rodape>
+      <Footer/>
     </MainContainer>
   );
 }
@@ -40,9 +41,3 @@ const MainContainer = styled.div`
   padding-top: 150px;
   z-index: 0;
 `;
-
-const Rodape = styled.footer`
-background-color: red;
-width: 100%;
-height: 100px;
-`

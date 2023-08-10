@@ -1,16 +1,11 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import alvaro from "../assets/images/alvaro.png";
-import marcus from "../assets/images/marcus.png";
-import bruno from "../assets/images/bruno.jpg";
-import pablo from "../assets/images/pablo.png";
-import pedrol from "../assets/images/pedrol.jpeg";
-import pedroa from "../assets/images/pedroa.png";
 import TeamMember from "./CarouselComponent";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import scroll from "../hooks/Scroll";
+import equipe from "../assets/images/equipe.png"
 
 export default function Equipe(){
 
@@ -24,11 +19,6 @@ export default function Equipe(){
       name: 'Pablo Siervuli',
       role: 'Marketing',
       imgSrc: 'pablo'
-    },
-    {
-      name: 'Bruno Claudiano',
-      role: 'Marketing & Vendas',
-      imgSrc: 'bruno',
     },
     {
       name: 'Marcus Castro',
@@ -61,11 +51,9 @@ export default function Equipe(){
           <>
             <Container>
               <p>Nossa equipe</p>
-              <Carousel {...settings}>
-                {members.map((item) => (<TeamMember imgSrc={item.imgSrc} name={item.name} role={item.role}/>))}
-              </Carousel>
+              <img src={equipe}/>
             </Container>
-            <Click onClick={() => scroll(2000)}>
+            <Click onClick={() => scroll(2780)}>
               CONHEÇA NOSSOS SERVIÇOS
             </Click>
           </>
@@ -81,7 +69,7 @@ border-radius: 8px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 30px;
+margin: 30px 0 150px 0;
 cursor: pointer;
 `
 
@@ -94,13 +82,20 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column; 
+img{
+  width: 700px;
+  height: 700px;
+  @media (max-width: 1200px) {
+    width: 300px;
+    height: 300px;
+  }
+}
 p{
   text-align: center;
   color: white;
   font-size: 40px;
-  margin-bottom: 100px;
   @media (max-width: 1200px) {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     font-size: 35px;
   }
 }

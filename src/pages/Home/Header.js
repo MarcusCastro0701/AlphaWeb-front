@@ -50,13 +50,13 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'equipe', position: 1700})}
+          onClick={() => handleItemClick({item: 'equipe', position: 1750})}
         >
           Equipe
         </div>
         <div
           className={selectedItem === 'servicos' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'servicos', position: 10000000})}
+          onClick={() => handleItemClick({item: 'servicos', position: 2780})}
         >
           Serviços
         </div>
