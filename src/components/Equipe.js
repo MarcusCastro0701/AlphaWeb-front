@@ -1,16 +1,11 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import alvaro from "../assets/images/alvaro.png";
-import marcus from "../assets/images/marcus.png";
-import bruno from "../assets/images/bruno.jpg";
-import pablo from "../assets/images/pablo.png";
-import pedrol from "../assets/images/pedrol.jpeg";
-import pedroa from "../assets/images/pedroa.png";
 import TeamMember from "./CarouselComponent";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { matchRoutes } from "react-router";
+import scroll from "../hooks/Scroll";
+import equipe from "../assets/images/equipe.png"
 
 export default function Equipe(){
 
@@ -24,11 +19,6 @@ export default function Equipe(){
       name: 'Pablo Siervuli',
       role: 'Marketing',
       imgSrc: 'pablo'
-    },
-    {
-      name: 'Bruno Claudiano',
-      role: 'Marketing & Vendas',
-      imgSrc: 'bruno',
     },
     {
       name: 'Marcus Castro',
@@ -58,15 +48,30 @@ export default function Equipe(){
     dotsClass: 'slick-dots',
   };
         return (
-          <Container>
-            <p>Nossa equipe</p>
-            <Carousel {...settings}>
-              {members.map((item) => (<TeamMember imgSrc={item.imgSrc} name={item.name} role={item.role}/>))}
-            </Carousel>
-          </Container>
+          <>
+            <Container>
+              <p>Nossa equipe</p>
+              <img src={equipe}/>
+            </Container>
+            <Click onClick={() => scroll(2780)}>
+              CONHEÇA NOSSOS SERVIÇOS
+            </Click>
+          </>
         );
 }
 
+const Click = styled.div`
+width: 300px;
+height: 50px;
+color: white;
+background-color: #3a76c9;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 30px 0 150px 0;
+cursor: pointer;
+`
 
 const Container = styled.div `
 height: 700px;
@@ -77,13 +82,20 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column; 
+img{
+  width: 700px;
+  height: 700px;
+  @media (max-width: 1200px) {
+    width: 300px;
+    height: 300px;
+  }
+}
 p{
   text-align: center;
   color: white;
   font-size: 40px;
-  margin-bottom: 100px;
   @media (max-width: 1200px) {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     font-size: 35px;
   }
 }
@@ -100,8 +112,8 @@ align-items: center;
 justify-content: center;
 color: white;
 @media (max-width: 1200px) {
-    width: 270px;
-    height: 205px;
+    width: 370px;
+    height: 280px;
   }
 img{
     width:400px;
@@ -109,12 +121,33 @@ img{
     border-radius: 5%;
     @media (max-width: 1200px) {
     width: 240px;
-    height: 150px;
-    margin-top: 10px;
+    height: 180px;
+    margin: 10px 0 40px 0;
   }
 }
 .slick-dots li button:before {
   color: white; 
+}
+p{
+  color: white;
+  font-size: 32px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction:column;
+  @media (max-width: 1200px) {
+    font-size: 27px;
+    line-height: 30px;
+  }
+  b{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    @media (max-width: 1200px) {
+      font-size: 23px;
+      line-height: 25px;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 `

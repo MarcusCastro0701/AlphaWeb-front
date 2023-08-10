@@ -33,7 +33,7 @@ export default function SobreNos(){
                 <h2>
                     Nossa equipe de gerentes e desenvolvedores trabalha <b>lado a lado com você</b>, para entender o <b>coração do seu negócio</b> e projetar <b>estratégias  e aplicações personalizadas</b> que o leve diretamente ao seu <b>público-alvo</b> e que torne suas <b>mediações</b> mais <b>práticas</b>.
                 </h2>
-                <div onClick={() => scroll(1700)}>
+                <div onClick={() => scroll(1750)}>
                     CONHEÇA A NOSSA EQUIPE
                 </div>
                 

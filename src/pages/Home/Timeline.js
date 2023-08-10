@@ -9,6 +9,7 @@ import particles from "./../../ParticlesOptions/particles.json";
 import particlesMobile from "./../../ParticlesOptions/particlesMobile.json";
 import { loadFull } from "tsparticles";
 import useParticlesInit from "../../hooks/useParticlesInit";
+import Footer from "../../components/Footer";
 
 export default function Timeline() {
   const particlesInit = useParticlesInit()
@@ -26,6 +27,7 @@ export default function Timeline() {
       <SobreNos/>
       <Equipe/>
       <Servicos/>
+      <Footer/>
     </MainContainer>
   );
 }
@@ -36,7 +38,6 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 60px;
   padding-top: 150px;
   z-index: 0;
 `;

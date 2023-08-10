@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default function LoadServices({ name, description, icon }) {
-  console.log(description);
   return (
     <Service>
       <h1>
@@ -25,7 +24,7 @@ const Service = styled.div`
   display: flex;
   border-width: 5px;
   margin-top: 10px;
-  border-style: outset;
+  border: 6px solid #003d69;
   border-color: #003d69;
   border-radius: 15px;
 
